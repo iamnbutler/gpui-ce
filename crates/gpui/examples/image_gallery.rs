@@ -2,10 +2,9 @@ use futures::FutureExt;
 use gpui::{
     App, AppContext, Application, Asset as _, AssetLogger, Bounds, ClickEvent, Context, ElementId,
     Entity, ImageAssetLoader, ImageCache, ImageCacheProvider, KeyBinding, Menu, MenuItem,
-    RetainAllImageCache, SharedString, TitlebarOptions, Window, WindowBounds, WindowOptions,
-    actions, div, hash, image_cache, img, prelude::*, px, rgb, size,
+    ReqwestHttpClient, RetainAllImageCache, SharedString, TitlebarOptions, Window, WindowBounds,
+    WindowOptions, actions, div, hash, image_cache, img, prelude::*, px, rgb, size,
 };
-use reqwest_client::ReqwestClient;
 use std::{collections::HashMap, sync::Arc};
 
 const IMAGES_IN_GALLERY: usize = 30;
@@ -248,7 +247,7 @@ fn main() {
     env_logger::init();
 
     Application::new().run(move |cx: &mut App| {
-        let http_client = ReqwestClient::user_agent("gpui example").unwrap();
+        let http_client = ReqwestHttpClient::with_user_agent("gpui example").unwrap();
         cx.set_http_client(Arc::new(http_client));
 
         cx.activate(true);

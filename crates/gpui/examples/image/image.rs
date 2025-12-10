@@ -5,10 +5,9 @@ use std::sync::Arc;
 use anyhow::Result;
 use gpui::{
     App, AppContext, Application, AssetSource, Bounds, Context, ImageSource, KeyBinding, Menu,
-    MenuItem, Point, SharedString, SharedUri, TitlebarOptions, Window, WindowBounds, WindowOptions,
-    actions, div, img, prelude::*, px, rgb, size,
+    MenuItem, Point, ReqwestHttpClient, SharedString, SharedUri, TitlebarOptions, Window,
+    WindowBounds, WindowOptions, actions, div, img, prelude::*, px, rgb, size,
 };
-use reqwest_client::ReqwestClient;
 
 struct Assets {
     base: PathBuf,
@@ -155,7 +154,7 @@ fn main() {
             base: manifest_dir.join("examples"),
         })
         .run(move |cx: &mut App| {
-            let http_client = ReqwestClient::user_agent("gpui example").unwrap();
+            let http_client = ReqwestHttpClient::with_user_agent("gpui example").unwrap();
             cx.set_http_client(Arc::new(http_client));
 
             cx.activate(true);

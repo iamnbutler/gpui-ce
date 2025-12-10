@@ -243,6 +243,9 @@ optional = true
 version = "1"
 optional = true
 
+[dependencies.bytes]
+version = "1"
+
 [dependencies.collections]
 version = "0.2.2"
 package = "gpui_collections"
@@ -315,6 +318,11 @@ optional = true
 [dependencies.raw-window-handle]
 version = "0.6"
 
+[dependencies.reqwest]
+version = "0.12"
+default-features = false
+features = ["rustls-tls", "stream"]
+
 [dependencies.refineable]
 version = "0.2.2"
 package = "gpui_refineable"
@@ -379,6 +387,10 @@ version = "=0.9.0"
 
 [dependencies.thiserror]
 version = "2.0.12"
+
+[dependencies.tokio]
+version = "1"
+features = ["rt-multi-thread"]
 
 [dependencies.usvg]
 version = "0.45.0"

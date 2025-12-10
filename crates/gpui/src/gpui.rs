@@ -45,6 +45,8 @@ mod utils;
 mod view;
 mod window;
 
+mod reqwest_client;
+
 #[cfg(doc)]
 pub mod _ownership_and_data_flow;
 
@@ -87,6 +89,7 @@ pub use keymap::*;
 pub use path_builder::*;
 pub use platform::*;
 pub use refineable::*;
+pub use reqwest_client::ReqwestHttpClient;
 pub use scene::*;
 pub use shared_string::*;
 pub use shared_uri::*;
