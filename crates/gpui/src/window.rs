@@ -55,7 +55,7 @@ use uuid::Uuid;
 
 mod prompts;
 
-use crate::util::atomic_incr_if_not_zero;
+use crate::utils::atomic_incr_if_not_zero;
 pub use prompts::*;
 
 pub(crate) const DEFAULT_WINDOW_SIZE: Size<Pixels> = size(px(1536.), px(864.));

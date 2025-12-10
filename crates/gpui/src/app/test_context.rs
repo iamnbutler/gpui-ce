@@ -586,7 +586,7 @@ impl<V: 'static> Entity<V> {
         cx.executor().advance_clock(advance_clock_by);
 
         async move {
-            let notification = crate::util::smol_timeout(duration, rx.recv())
+            let notification = crate::utils::smol_timeout(duration, rx.recv())
                 .await
                 .expect("next notification timed out");
             drop(subscription);
@@ -630,7 +630,7 @@ impl<V> Entity<V> {
         let handle = self.downgrade();
 
         async move {
-            crate::util::smol_timeout(Duration::from_secs(1), async move {
+            crate::utils::smol_timeout(Duration::from_secs(1), async move {
                 loop {
                     {
                         let cx = cx.borrow();

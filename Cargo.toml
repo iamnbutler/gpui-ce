@@ -9,7 +9,6 @@ members = [
     "crates/refineable",
     "crates/semantic_version",
     "crates/sum_tree",
-    "crates/util",
     "crates/util_macros",
 ]
 

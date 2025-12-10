@@ -1,5 +1,4 @@
 #![doc = include_str!("../README.md")]
-#![deny(missing_docs)]
 #![allow(clippy::type_complexity)] // Not useful, GPUI makes heavy use of callbacks
 #![allow(clippy::collapsible_else_if)] // False positives in platform specific code
 #![allow(unused_mut)] // False positives in platform specific code
@@ -42,7 +41,7 @@ mod taffy;
 #[cfg(any(test, feature = "test-support"))]
 pub mod test;
 mod text_system;
-mod util;
+mod utils;
 mod view;
 mod window;
 
@@ -102,8 +101,8 @@ pub use taffy::{AvailableSpace, LayoutId};
 pub use test::*;
 pub use text_system::*;
 #[cfg(any(test, feature = "test-support"))]
-pub use util::smol_timeout;
-pub use util::{FutureExt, Timeout, arc_cow::ArcCow};
+pub use utils::smol_timeout;
+pub use utils::{FutureExt, Timeout, arc_cow::ArcCow};
 pub use view::*;
 pub use window::*;
 

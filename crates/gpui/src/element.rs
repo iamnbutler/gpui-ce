@@ -34,7 +34,7 @@
 use crate::{
     App, ArenaBox, AvailableSpace, Bounds, Context, DispatchNodeId, ELEMENT_ARENA, ElementId,
     FocusHandle, InspectorElementId, LayoutId, Pixels, Point, Size, Style, Window,
-    util::FluentBuilder,
+    utils::FluentBuilder,
 };
 use derive_more::{Deref, DerefMut};
 pub(crate) use smallvec::SmallVec;

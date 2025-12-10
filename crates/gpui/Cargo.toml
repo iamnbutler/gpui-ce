@@ -1,6 +1,6 @@
 [package]
 edition = "2024"
-name = "gpui-ce"
+name = "gpui_ce"
 version = "0.2.2"
 authors = ["Nathan Sobo <nathan@zed.dev>"]
 build = "build.rs"
@@ -433,11 +433,6 @@ version = "0.9"
 
 [dev-dependencies.unicode-segmentation]
 version = "1.10"
-
-[dev-dependencies.util]
-version = "0.2.2"
-features = ["test-support"]
-package = "gpui_util"
 
 [target.'cfg(any(target_os = "linux", target_os = "freebsd"))'.dependencies.as-raw-xcb-connection]
 version = "1"

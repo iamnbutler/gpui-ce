@@ -21,7 +21,7 @@ use std::{
 };
 
 use super::Context;
-use crate::util::atomic_incr_if_not_zero;
+use crate::utils::atomic_incr_if_not_zero;
 #[cfg(any(test, feature = "leak-detection"))]
 use collections::HashMap;
 

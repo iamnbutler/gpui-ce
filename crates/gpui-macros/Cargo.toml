@@ -63,7 +63,9 @@ features = [
     "visit-mut",
 ]
 
-[dev-dependencies]
+[dev-dependencies.gpui]
+path = "../gpui"
+package = "gpui_ce"
 
 [lints.clippy]
 dbg_macro = "deny"
