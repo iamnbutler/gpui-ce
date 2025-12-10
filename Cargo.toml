@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/gpui",
+    "crates/gpui-macros",
+    "crates/collections",
+    "crates/http_client",
+    "crates/media",
+    "crates/refineable",
+    "crates/semantic_version",
+    "crates/sum_tree",
+    "crates/util",
+    "crates/util_macros",
+]
+
+default-members = ["crates/gpui"]
+
+[workspace.package]
+version = "0.3.0"
+edition = "2024"
+license = "Apache-2.0"
