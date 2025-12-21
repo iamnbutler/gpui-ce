@@ -1,3 +1,5 @@
+note: this repo will be deleted in the near future. see gpui-ce/gpui-ce
+
 # GPUI Community Edition
 
 A community fork of [GPUI](https://gpui.rs), Zed's GPU-accelerated UI framework.
